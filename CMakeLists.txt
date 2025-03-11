@@ -1,13 +1,23 @@
 cmake_minimum_required(VERSION 3.00)
 project(KnapsackProblem)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 14)
 
 find_package(GTest REQUIRED)
 
-add_executable(KnapsackProblem main.cpp)
+include_directories(include)
 
-add_executable(Tests tests/tests.cpp)
+set(SOURCE_FILES
+        src/main.cpp
+)
+
+set(TEST_FILES
+        tests/UnboundedKnapsackTests.cpp
+)
+
+add_executable(KnapsackProblem ${SOURCE_FILES})
+
+add_executable(Tests ${TEST_FILES})
 
 target_link_libraries(Tests PRIVATE GTest::GTest GTest::Main pthread)
 

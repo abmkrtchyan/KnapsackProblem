@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "../UnboundedKnapsack.h"
+#include "UnboundedKnapsack.h"
 
 TEST(UnboundedKnapsackTest, BasicCase)
 {
