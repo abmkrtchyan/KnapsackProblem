@@ -18,8 +18,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt update
-          apt install -y cmake g++ libgtest-dev
+          sudo apt update
+          sudo apt install -y cmake g++ libgtest-dev
 
       - name: Configure CMake
         run: |
